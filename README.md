@@ -11,8 +11,9 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Router
+
+FluttFlutter package to simplify route creation. By providing multiple transition options.
 
 ## Features
 
@@ -25,11 +26,21 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+MaterialApp(
+  initialRoute: '/',
+  onGenerateRoute: RoutHelper(routes: {
+      '/': (args) => TransitionBuilderRoute.none(widget: NonePage()),
+      '/slideRight': (args) => TransitionBuilderRoute.slideRight(widget: SlideRightPage()),
+      '/slideLeft': (args) => TransitionBuilderRoute.slideRight(widget: SlideLeftPage()),
+      '/slideUp': (args) => TransitionBuilderRoute.slideRight(widget: SlideUpPage()),
+      '/slideDown': (args) => TransitionBuilderRoute.slideRight(widget: SlideDownPage()),
+      '/scale': (args) => TransitionBuilderRoute.slideRight(widget: ScalePage()),
+      '/size': (args) => TransitionBuilderRoute.slideRight(widget: SizePage()),
+      '/fade': (args) => TransitionBuilderRoute.slideRight(widget: FadePage()),
+    },
+  ).onGenerateRoute,
+);
 ```
 
 ## Additional information
