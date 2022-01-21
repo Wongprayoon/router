@@ -13,7 +13,7 @@ and the Flutter guide for
 
 # Router
 
-FluttFlutter package to simplify route creation. By providing multiple transition options.
+Flutter package to simplify route creation. By providing multiple transition options.
 
 ## Features
 
@@ -25,6 +25,18 @@ TODO: List prerequisites and provide or point to information on how to
 start using the package.
 
 ## Usage
+
+Add package
+
+```yaml
+dependencies:
+  router:
+    git:
+      url: git://github.com/wongprayoon/router.git
+      ref: main
+```
+
+Example
 
 ```dart
 MaterialApp(
